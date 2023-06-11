@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\FDT.Management.Contracts\FDT.Management.Contracts.csproj" />
     <ProjectReference Include="..\..\FDT.Management.Persistence\FDT.Management.Persistence.csproj" />
     <ProjectReference Include="..\FDT.Management.Base\FDT.Management.Base.csproj" />
     <ProjectReference Include="..\FDT.WindTurbineLib\FDT.WindTurbineLib.csproj" />

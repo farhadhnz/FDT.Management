@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FDT.Management.Base", "FDT.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FDT.WindTurbineLib", "FDT.WindTurbineLib\FDT.WindTurbineLib.csproj", "{DFBE4D52-FB2B-4D0E-A92A-A5615DB573A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FDT.Management.API", "FDT.Management.API\FDT.Management.API.csproj", "{B7FD3E6F-7450-441C-9BEE-92F7983650B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FDT.Management.API", "FDT.Management.API\FDT.Management.API.csproj", "{B7FD3E6F-7450-441C-9BEE-92F7983650B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FDT.Management.Contracts", "..\FDT.Management.Contracts\FDT.Management.Contracts.csproj", "{D33BC3D9-8706-46EA-A6E7-64D1EC183DDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B7FD3E6F-7450-441C-9BEE-92F7983650B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7FD3E6F-7450-441C-9BEE-92F7983650B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7FD3E6F-7450-441C-9BEE-92F7983650B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D33BC3D9-8706-46EA-A6E7-64D1EC183DDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33BC3D9-8706-46EA-A6E7-64D1EC183DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33BC3D9-8706-46EA-A6E7-64D1EC183DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33BC3D9-8706-46EA-A6E7-64D1EC183DDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
