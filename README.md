@@ -11,7 +11,7 @@ The Digital Twin Management Microservice is a component of a larger system that 
 
 ## API Documentation
 
-The API documentation provides detailed information about the endpoints, request/response formats, and authentication mechanisms. You can access the API documentation by visiting `http://localhost:5067/api-docs` when the microservice is running.
+The API documentation provides detailed information about the endpoints, request/response formats, and authentication mechanisms.
 
 ## Database
 
