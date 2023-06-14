@@ -11,11 +11,11 @@ The Digital Twin Management Microservice is a component of a larger system that 
 
 ## API Documentation
 
-The API documentation provides detailed information about the endpoints, request/response formats, and authentication mechanisms. You can access the API documentation by visiting `http://localhost:3000/api-docs` when the microservice is running.
+The API documentation provides detailed information about the endpoints, request/response formats, and authentication mechanisms. You can access the API documentation by visiting `http://localhost:5067/api-docs` when the microservice is running.
 
 ## Database
 
-The Digital Twin Management Microservice uses a database to store digital twin projects and entities. The default database configuration is PostgreSQL, but you can use a different database by updating the configuration values in the `.env` file.
+The Digital Twin Management Microservice uses a database to store digital twin projects and entities. The default database configuration is Microsoft SQL Server.
 
 The microservice uses Entity Framework Core to handle database operations. When the microservice is started for the first time, it automatically creates the necessary database schema based on the entity models.
 
@@ -30,7 +30,3 @@ Contributions to the Digital Twin Management Microservice are welcome! If you fi
 5. Open a pull request against the `main` branch of the original repository.
 
 Please ensure that your code adheres to the existing code style and includes appropriate tests.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
