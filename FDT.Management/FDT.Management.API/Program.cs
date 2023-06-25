@@ -23,6 +23,16 @@ builder.Services.AddControllers().AddNewtonsoftJson(options => {
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.WithOrigins("http://localhost:4200")
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
 builder.Services.AddScoped<ICommandHandler<CreateDigitalTwinCommand>, CreateDigitalTwinCommandHandler>();
 builder.Services.AddScoped<ICommandHandler<CreateProjectCommand>, CreateProjectCommandHandler>();
 
@@ -50,6 +60,8 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors();
 
 app.Run();
 

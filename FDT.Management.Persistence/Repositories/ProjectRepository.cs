@@ -18,30 +18,40 @@ namespace FDT.Management.Persistence.Repositories
 
             await dbContext.SaveChangesAsync();
         }
-
-        public void Delete(string id)
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+            var project = await dbContext.Projects.FirstOrDefaultAsync(p => p.Id == id);
+
+            if (project != null)
+            {
+                dbContext.Projects.Remove(project);
+                await dbContext.SaveChangesAsync();
+            }
         }
 
-        public List<DigitalTwinProject> GetAll()
+        public async Task<List<DigitalTwinProject>> GetAll()
         {
-            throw new NotImplementedException();
+            return await dbContext.Projects.ToListAsync();
         }
 
-        public async Task<List<DigitalTwinProject>> GetAllByProjectId(int id)
+        public async Task<DigitalTwinProject> GetById(int id)
         {
-            throw new NotImplementedException();
+            return await dbContext.Projects
+                .FirstOrDefaultAsync(project => project.Id == id);
         }
 
-        public DigitalTwinProject GetById(string id)
+        public async Task Update(DigitalTwinProject project)
         {
-            throw new NotImplementedException();
-        }
+            var dbProject = await dbContext.Projects.FirstOrDefaultAsync(p => p.Id == project.Id);
 
-        public DigitalTwinProject Update(DigitalTwinProject digitalTwin)
-        {
-            throw new NotImplementedException();
+            if (dbProject != null)
+            {
+                dbProject.ProjectName = project.ProjectName;
+                dbProject.ProjectType = project.ProjectType;
+                dbProject.DateModified = DateTime.Now;
+                
+                await dbContext.SaveChangesAsync();
+            }
         }
     }
 }

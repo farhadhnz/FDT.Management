@@ -9,8 +9,8 @@ namespace FDT.Management.Base.Commands
 {
     public abstract class BaseCommand
     {
-        public string Id { get; set; }
-        public DateTime Timestamp { get; set; }
+        //public string Id { get; set; }
+        //public DateTime Timestamp { get; set; }
 
     }
 }

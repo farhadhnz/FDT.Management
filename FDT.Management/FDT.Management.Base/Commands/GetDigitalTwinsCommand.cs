@@ -12,7 +12,6 @@ namespace FDT.Management.Base.Commands
         public GetDigitalTwinsCommand()
         {
             DigitalTwinModels = new List<DigitalTwin>();
-            Timestamp = DateTime.UtcNow;
         }
     }
 }

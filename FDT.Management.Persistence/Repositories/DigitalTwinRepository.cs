@@ -36,9 +36,11 @@ namespace FDT.Management.Persistence.Repositories
             return digitalTwins;
         }
 
-        public DigitalTwinEntity GetById(string id)
+        public async Task<DigitalTwinEntity> GetById(int id)
         {
-            throw new NotImplementedException();
+            var digitalTwin = await dbContext.DigitalTwins.Include(x => x.Properties)
+               .FirstOrDefaultAsync(x => x.Id == id);
+            return digitalTwin;
         }
 
         public DigitalTwinEntity Update(DigitalTwinEntity digitalTwin)
