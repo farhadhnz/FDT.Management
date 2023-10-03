@@ -35,5 +35,23 @@ namespace FDT.Management.API.Controllers
                 throw;
             }
         }
+
+        [HttpGet("/dt/{id}")]
+        public async Task<DigitalTwinEntity> GetDigitalTwinById(int id)
+        {
+            try
+            {
+                var digitalTwin = await repository.GetById(id);
+
+                return digitalTwin;
+            }
+            catch (Exception ex)
+            {
+                // Log the error
+                _logger.LogError(ex, "An error occurred while loading the digital twin.");
+
+                throw;
+            }
+        }
     }
 }

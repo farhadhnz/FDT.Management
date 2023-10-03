@@ -5,7 +5,8 @@
         public static async Task<IEnumerable<Tuple<double, double>>> Simulate(double rotorDiameter)
         {
             // Read wind speed data from CSV file
-            string csvFilePath = "../FDT.Management.API/weather.csv";
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string csvFilePath = Path.Combine(baseDirectory, "weather.csv");
             var windSpeeds = await ReadWindSpeedDataFromCSV(csvFilePath, "WindSpeed9am");
 
             // Calculate swept area of the rotor
